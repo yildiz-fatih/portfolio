@@ -7,17 +7,15 @@
     <title>Fatih Yıldız</title>
     <style>
         :root {
-            /* "paper like" - background */
-            --paper: #EFEDE5;
-            /* straightforward black - titles */
-            --black: #000000;
-            /* "old printer ink" - everywhere else */
-            --ink: #3c393e;
+            --bg: #1E1F20;
+            --accent: #F35C51;
+            --text: #D6CBB6;
+            --mutedtext: #A2988A;
         }
 
         body {
-            background-color: var(--paper);
-            color: var(--ink);
+            background-color: var(--bg);
+            color: var(--mutedtext);
             font-family: Georgia, serif;
             max-width: 800px;
             /* center the content horizontally */
@@ -28,33 +26,80 @@
         h1,
         h2,
         h3 {
-            color: var(--black);
-            margin-bottom: 15px;
+            color: var(--text);
+        }
+
+        h1 {
+            font-size: 58px;
+            margin-bottom: 0px;
         }
 
         a {
-            color: inherit;
+            color: var(--text);
             text-decoration: none;
-        }
-
-        nav a {
-            border-bottom: 1px solid var(--ink);
         }
 
         .project-card {
             display: block;
-            border: 1.5px solid var(--ink);
+            border: 1.5px solid var(--mutedtext);
             border-radius: 0;
             padding: 20px;
-            margin: 10px;
+            color: var(--mutedtext);
+            margin-bottom: 24px;
+        }
+
+        .project-card:hover {
+            border-color: var(--accent);
+        }
+
+        .project-card:hover h3 {
+            color: var(--accent);
         }
 
         .job {
-            margin: 10px;
+            margin-bottom: 24px;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 6px 16px;
+            background: var(--accent);
+            color: var(--bg);
+            margin-top: 2px;
+            margin-bottom: 6px;
+        }
+
+        .btn {
+            font-size: 0.95rem;
+            padding: 8px 18px;
+            border: 1px solid var(--text);
+        }
+
+        .btn:hover {
+            color: var(--accent);
+            border-color: var(--accent);
+        }
+
+        nav {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 15px;
+        }
+
+        .aside {
+            font-style: italic;
+            font-size: 0.85em;
+            color: var(--mutedtext);
+            margin-bottom: 36px;
+            margin-top: 6px;
         }
 
         hr {
-            margin: 30px 0;
+            border: none;
+            width: 80px;
+            height: 1px;
+            background: var(--mutedtext);
+            margin: 56px 0;
         }
     </style>
 </head>
@@ -62,14 +107,13 @@
 <body>
     <header>
         <h1>Fatih Yıldız</h1>
-        <p class="role">Backend Engineer</p>
-        <p style="font-style: italic; font-size: 0.85em; opacity: 0.85;">off the clock, I play <a
-                style="border-bottom: 1px solid var(--ink);" target="_blank"
+        <p class="tag">Backend Engineer</p>
+        <p class="aside">off the clock, I play <a style="border-bottom: 1px solid var(--accent);" target="_blank"
                 href="https://www.youtube.com/@yildiz-fatih">drums</a></p>
         <nav>
-            <a href="mailto:yildizahmetfatih@gmail.com">Email</a>
-            <a href="https://github.com/yildiz-fatih" target="_blank">GitHub</a>
-            <a href="https://www.linkedin.com/in/fatih-y/" target="_blank">LinkedIn</a>
+            <a class="btn" href="mailto:yildizahmetfatih@gmail.com">Email</a>
+            <a class="btn" href="https://github.com/yildiz-fatih" target="_blank">GitHub</a>
+            <a class="btn" href="https://www.linkedin.com/in/fatih-y/" target="_blank">LinkedIn</a>
         </nav>
     </header>
 
@@ -77,27 +121,27 @@
 
     <section id="projects">
         <h2>Projects</h2>
-        <a class="project-card" href="projects/agora.html">
+        <a class="project-card">
             <h3>Agora</h3>
             <p>Project description here</p>
         </a>
-        <a class="project-card" href="projects/readable.html">
+        <a class="project-card">
             <h3>Readable</h3>
             <p>Project description here</p>
         </a>
-        <a class="project-card" href="projects/gopaste.html">
+        <a class="project-card">
             <h3>GoPaste</h3>
             <p>Project description here</p>
         </a>
-        <a class="project-card" href="projects/httpserver.html">
+        <a class="project-card">
             <h3>HTTP Server</h3>
             <p>Project description here</p>
         </a>
-        <a class="project-card" href="projects/traceroute.html">
+        <a class="project-card">
             <h3>Traceroute</h3>
             <p>Project description here</p>
         </a>
-        <a class="project-card" href="projects/seashell.html">
+        <a class="project-card">
             <h3>Seashell</h3>
             <p>Project description here</p>
         </a>
@@ -110,14 +154,14 @@
         <div class="job">
             <h3>Software Engineer Intern — Intertech</h3>
             <p class="date">Jun 2024 – Aug 2024</p>
-            <p>Job description here</p>
         </div>
         <div class="job">
             <h3>Software Engineer Intern — Doğuş Teknoloji</h3>
             <p class="date">Jul 2023 – Aug 2023</p>
-            <p>Job description here</p>
         </div>
     </section>
+
+    <hr>
 </body>
 
 </html>

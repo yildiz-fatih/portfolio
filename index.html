@@ -105,6 +105,16 @@
             background: var(--mutedtext);
             margin: 56px 0;
         }
+
+        .project-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .project-card-header h3 {
+            margin: 0;
+        }
     </style>
 </head>
 
@@ -125,26 +135,41 @@
 
     <section id="projects">
         <h2>Projects</h2>
-        <a class="project-card">
-            <h3>Agora</h3>
+        <div class="project-card">
+            <div class="project-card-header">
+                <h3>Agora</h3>
+                <a class="github-link" href="https://github.com/yildiz-fatih/agora" target="_blank">GitHub</a>
+            </div>
             <p>Q&A app, built as microservices</p>
-        </a>
-        <a class="project-card">
-            <h3>Readable</h3>
+        </div>
+        <div class="project-card">
+            <div class="project-card-header">
+                <h3>Readable</h3>
+                <a class="github-link" href="https://github.com/yildiz-fatih/readable" target="_blank">GitHub</a>
+            </div>
             <p>Save web pages as readable PDF, EPUB, or Markdown documents</p>
-        </a>
-        <a class="project-card">
-            <h3>GoPaste</h3>
+        </div>
+        <div class="project-card">
+            <div class="project-card-header">
+                <h3>GoPaste</h3>
+                <a class="github-link" href="https://github.com/yildiz-fatih/gopaste" target="_blank">GitHub</a>
+            </div>
             <p>A minimal, high-performance pastebin</p>
-        </a>
-        <a class="project-card">
-            <h3>HTTP Server</h3>
+        </div>
+        <div class="project-card">
+            <div class="project-card-header">
+                <h3>HTTP Server</h3>
+                <a class="github-link" href="https://github.com/yildiz-fatih/http-server" target="_blank">GitHub</a>
+            </div>
             <p>HTTP/1.1 file server built over TCP</p>
-        </a>
-        <a class="project-card">
-            <h3>Traceroute</h3>
+        </div>
+        <div class="project-card">
+            <div class="project-card-header">
+                <h3>Traceroute</h3>
+                <a class="github-link" href="https://github.com/yildiz-fatih/traceroute" target="_blank">GitHub</a>
+            </div>
             <p>Give it a hostname (or an IP address) and it prints the route your packets take to get there</p>
-        </a>
+        </div>
     </section>
 
     <hr>
@@ -153,11 +178,11 @@
         <h2>Experience</h2>
         <div class="job">
             <h3>Software Engineer Intern — Intertech</h3>
-            <p class="date">Jun 2024 – Aug 2024</p>
+            <p class="date">Jun 2024 -- Aug 2024</p>
         </div>
         <div class="job">
             <h3>Software Engineer Intern — Doğuş Teknoloji</h3>
-            <p class="date">Jul 2023 – Aug 2023</p>
+            <p class="date">Jul 2023 -- Aug 2023</p>
         </div>
     </section>
 

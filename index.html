@@ -18,13 +18,14 @@
         }
 
         body {
+            margin: 0 auto;
+            padding-inline: 30px;
             background-color: var(--bg);
             color: var(--mutedtext);
             font-family: "Schibsted Grotesk", sans-serif;
             max-width: 800px;
             /* center the content horizontally */
             margin-inline: auto;
-            padding: 30px;
         }
 
         h1,
@@ -34,7 +35,7 @@
         }
 
         h1 {
-            font-size: 58px;
+            font-size: 75px;
             margin-bottom: 0px;
         }
 
@@ -60,10 +61,6 @@
             color: var(--accent);
         }
 
-        .job {
-            margin-bottom: 24px;
-        }
-
         .tag {
             display: inline-block;
             padding: 6px 16px;
@@ -87,7 +84,7 @@
         nav {
             display: flex;
             gap: 12px;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
 
         .aside {
@@ -103,7 +100,7 @@
             width: 80px;
             height: 1px;
             background: var(--mutedtext);
-            margin: 56px 0;
+            margin: 56px auto;
         }
 
         .project-card-header {
@@ -115,20 +112,76 @@
         .project-card-header h3 {
             margin: 0;
         }
+
+        header {
+            min-height: 100vh;
+            min-height: 100dvh;
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .intro {
+            margin-block: auto;
+        }
+
+        .bottom {
+            text-align: center;
+            padding-bottom: 30px;
+        }
+
+        nav {
+            justify-content: center;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        ::selection {
+            background: rgba(243, 92, 81, 0.4);
+        }
+
+        .timeline p {
+            margin-block: 8px;
+        }
+
+        h2 {
+            font-size: 40px;
+        }
     </style>
 </head>
 
 <body>
     <header>
-        <h1>Fatih Yıldız</h1>
-        <p class="tag">Backend Engineer</p>
-        <p class="aside">off the clock, I play <a style="border-bottom: 1px solid var(--accent);" target="_blank"
-                href="https://www.youtube.com/@yildiz-fatih">drums</a></p>
-        <nav>
-            <a class="btn" href="mailto:yildizahmetfatih@gmail.com">Email</a>
-            <a class="btn" href="https://github.com/yildiz-fatih" target="_blank">GitHub</a>
-            <a class="btn" href="https://www.linkedin.com/in/fatih-y/" target="_blank">LinkedIn</a>
-        </nav>
+        <div class="intro">
+            <h1>Fatih Yıldız</h1>
+            <p class="tag">Backend Engineer</p>
+            <p class="aside">off the clock, I play <a style="border-bottom: 1px solid var(--accent);" target="_blank"
+                    href="https://www.youtube.com/@yildiz-fatih">drums</a></p>
+
+            <div class="timeline">
+                <p>&emsp;↪&#xFE0E; <strong>SWE Intern</strong>
+                    <span style="white-space: nowrap">@ <a href="https://www.intertech.com.tr" target="_blank"
+                            style="color: inherit; text-decoration: underline dotted;">Intertech</a> &mdash; 2024</span>
+                </p>
+                <p>&emsp;↪&#xFE0E; <strong>SWE Intern</strong>
+                    <span style="white-space: nowrap">@ <a href="https://www.d-teknoloji.com.tr" target="_blank"
+                            style="color: inherit; text-decoration: underline dotted;">Doğuş Teknoloji</a> &mdash;
+                        2023</span>
+                </p>
+            </div>
+        </div>
+
+        <div class="bottom">
+            <nav>
+                <a class="btn" href="mailto:yildizahmetfatih@gmail.com">Email</a>
+                <a class="btn" href="https://github.com/yildiz-fatih" target="_blank">GitHub</a>
+                <a class="btn" href="https://www.linkedin.com/in/fatih-y/" target="_blank">LinkedIn</a>
+            </nav>
+
+            <a href="#projects" style="color: inherit;"><i>see what I've built</i> &darr;</a>
+        </div>
     </header>
 
     <hr>
@@ -174,20 +227,6 @@
                 <a class="github-link" href="https://github.com/yildiz-fatih/traceroute" target="_blank">GitHub</a>
             </div>
             <p>Give it a hostname (or an IP address) and it prints the route your packets take to get there</p>
-        </div>
-    </section>
-
-    <hr>
-
-    <section id="experience">
-        <h2>Experience</h2>
-        <div class="job">
-            <h3>Software Engineer Intern — Intertech</h3>
-            <p class="date">Jun 2024 -- Aug 2024</p>
-        </div>
-        <div class="job">
-            <h3>Software Engineer Intern — Doğuş Teknoloji</h3>
-            <p class="date">Jul 2023 -- Aug 2023</p>
         </div>
     </section>
 

@@ -91,7 +91,7 @@
             font-style: italic;
             font-size: 0.85em;
             color: var(--mutedtext);
-            margin-bottom: 36px;
+            margin-bottom: 44px;
             margin-top: 6px;
         }
 
@@ -142,12 +142,18 @@
             background: rgba(243, 92, 81, 0.4);
         }
 
-        .timeline p {
-            margin-block: 8px;
-        }
-
         h2 {
             font-size: 40px;
+        }
+
+        #graph-container {
+            display: block !important;
+            max-width: 340px;
+            padding-bottom: 0 !important;
+        }
+
+        #graph-container svg {
+            display: block;
         }
     </style>
 </head>
@@ -160,17 +166,7 @@
             <p class="aside">off the clock, I play <a style="border-bottom: 1px solid var(--accent);" target="_blank"
                     href="https://www.youtube.com/@yildiz-fatih">drums</a></p>
 
-            <div class="timeline">
-                <p>&emsp;↪&#xFE0E; <strong>SWE Intern</strong>
-                    <span style="white-space: nowrap">@ <a href="https://www.intertech.com.tr" target="_blank"
-                            style="color: inherit; text-decoration: underline dotted;">Intertech</a> &mdash; 2024</span>
-                </p>
-                <p>&emsp;↪&#xFE0E; <strong>SWE Intern</strong>
-                    <span style="white-space: nowrap">@ <a href="https://www.d-teknoloji.com.tr" target="_blank"
-                            style="color: inherit; text-decoration: underline dotted;">Doğuş Teknoloji</a> &mdash;
-                        2023</span>
-                </p>
-            </div>
+            <div id="graph-container"></div>
         </div>
 
         <div class="bottom">
@@ -190,13 +186,6 @@
         <h2>Projects</h2>
         <div class="project-card">
             <div class="project-card-header">
-                <h3>Agora</h3>
-                <a class="github-link" href="https://github.com/yildiz-fatih/agora" target="_blank">GitHub</a>
-            </div>
-            <p>Q&A app, built as microservices</p>
-        </div>
-        <div class="project-card">
-            <div class="project-card-header">
                 <h3>Readable</h3>
                 <div>
                     <a class="live-link" href="https://readable.fatihyildiz.dev" target="_blank">Demo</a>
@@ -206,6 +195,13 @@
 
             </div>
             <p>Save web pages as readable PDF, EPUB, or Markdown documents</p>
+        </div>
+        <div class="project-card">
+            <div class="project-card-header">
+                <h3>Agora</h3>
+                <a class="github-link" href="https://github.com/yildiz-fatih/agora" target="_blank">GitHub</a>
+            </div>
+            <p>Q&A app, built as microservices</p>
         </div>
         <div class="project-card">
             <div class="project-card-header">
@@ -231,6 +227,43 @@
     </section>
 
     <hr>
+    <script src="https://cdn.jsdelivr.net/npm/@gitgraph/js@1.4.0/lib/gitgraph.umd.min.js"></script>
+    <script>
+        const { createGitgraph, templateExtend, TemplateName } = GitgraphJS
+
+        const TEXT = "#D6CBB6"
+        const ACCENT = "#F35C51"
+        const BG = "#1E1F20"
+        const FONT = '"Schibsted Grotesk", sans-serif'
+
+        const graphContainer = document.getElementById("graph-container")
+
+        const template = templateExtend(TemplateName.Metro, {
+            branch: { lineWidth: 3, spacing: 28, label: { display: false } },
+            colors: [TEXT, ACCENT],
+            commit: {
+                spacing: 54,
+                dot: { size: 10, strokeWidth: 2, strokeColor: BG },
+                message: {
+                    displayAuthor: false,
+                    displayHash: false,
+                    font: "normal 14px " + FONT,
+                },
+            },
+        })
+
+        const gitgraph = createGitgraph(graphContainer, { template, responsive: true })
+
+        const main = gitgraph.branch("main")
+        main.commit("Hello, world") // initial commit
+
+        const drums = main.branch("drums")
+        drums.commit("Drummer @ Mastermind, 2019")
+        drums.commit("Drum Teacher @ Hayal Sahnesi, 2020")
+
+        main.commit("SWE Intern @ Doğuş Teknoloji, 2023")
+        main.commit("SWE Intern @ Intertech, 2024")
+    </script>
 </body>
 
 </html>

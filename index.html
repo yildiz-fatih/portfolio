@@ -53,14 +53,6 @@
             margin-bottom: 24px;
         }
 
-        .project-card:hover {
-            border-color: var(--accent);
-        }
-
-        .project-card:hover h3 {
-            color: var(--accent);
-        }
-
         .tag {
             display: inline-block;
             padding: 6px 16px;
@@ -74,11 +66,16 @@
             font-size: 0.95rem;
             padding: 8px 18px;
             border: 1px solid var(--text);
+            transition: transform 0.1s;
         }
 
         .btn:hover {
             color: var(--accent);
             border-color: var(--accent);
+        }
+
+        .btn:active {
+            transform: scale(0.95);
         }
 
         nav {
@@ -156,6 +153,26 @@
         #graph-container svg {
             display: block;
         }
+
+        .text-link {
+            color: inherit;
+            text-decoration: underline;
+            text-decoration-color: var(--accent);
+            text-underline-offset: 3px;
+            text-decoration-thickness: 1.5px;
+        }
+
+        .text-link:hover {
+            color: var(--accent);
+        }
+
+        .scroll-cue {
+            color: var(--mutedtext);
+        }
+
+        .scroll-cue:hover {
+            color: var(--accent);
+        }
     </style>
 </head>
 
@@ -164,7 +181,7 @@
         <div class="intro">
             <h1>Fatih Yıldız</h1>
             <p class="tag">Backend Engineer</p>
-            <p class="aside">off the clock, I play <a style="border-bottom: 1px solid var(--accent);" target="_blank"
+            <p class="aside">off the clock, I play <a class="text-link" target="_blank"
                     href="https://www.youtube.com/@yildiz-fatih">drums</a></p>
 
             <div id="graph-container"></div>
@@ -174,10 +191,10 @@
             <nav>
                 <a class="btn" href="mailto:yildizahmetfatih@gmail.com">Email</a>
                 <a class="btn" href="https://github.com/yildiz-fatih" target="_blank">GitHub</a>
-                <a class="btn" href="https://www.linkedin.com/in/fatih-y/" target="_blank">LinkedIn</a>
+                <a class="btn" href="https://www.linkedin.com/in/fatih-y" target="_blank">LinkedIn</a>
             </nav>
 
-            <a href="#projects" style="color: inherit;"><i>see what I've built</i> &darr;</a>
+            <a href="#projects" class="scroll-cue"><i>see what I've built</i> &darr;</a>
         </div>
     </header>
 
@@ -189,9 +206,9 @@
             <div class="project-card-header">
                 <h3>Readable</h3>
                 <div>
-                    <a class="live-link" href="https://readable.fatihyildiz.dev" target="_blank">Demo</a>
+                    <a class="text-link" href="https://readable.fatihyildiz.dev" target="_blank">Demo</a>
                     |
-                    <a class="github-link" href="https://github.com/yildiz-fatih/readable" target="_blank">GitHub</a>
+                    <a class="text-link" href="https://github.com/yildiz-fatih/readable" target="_blank">GitHub</a>
                 </div>
 
             </div>
@@ -200,28 +217,28 @@
         <div class="project-card">
             <div class="project-card-header">
                 <h3>Agora</h3>
-                <a class="github-link" href="https://github.com/yildiz-fatih/agora" target="_blank">GitHub</a>
+                <a class="text-link" href="https://github.com/yildiz-fatih/agora" target="_blank">GitHub</a>
             </div>
             <p>Q&A app, built as microservices</p>
         </div>
         <div class="project-card">
             <div class="project-card-header">
                 <h3>GoPaste</h3>
-                <a class="github-link" href="https://github.com/yildiz-fatih/gopaste" target="_blank">GitHub</a>
+                <a class="text-link" href="https://github.com/yildiz-fatih/gopaste" target="_blank">GitHub</a>
             </div>
             <p>A minimal, high-performance pastebin</p>
         </div>
         <div class="project-card">
             <div class="project-card-header">
                 <h3>HTTP Server</h3>
-                <a class="github-link" href="https://github.com/yildiz-fatih/http-server" target="_blank">GitHub</a>
+                <a class="text-link" href="https://github.com/yildiz-fatih/http-server" target="_blank">GitHub</a>
             </div>
             <p>HTTP/1.1 file server built over TCP</p>
         </div>
         <div class="project-card">
             <div class="project-card-header">
                 <h3>Traceroute</h3>
-                <a class="github-link" href="https://github.com/yildiz-fatih/traceroute" target="_blank">GitHub</a>
+                <a class="text-link" href="https://github.com/yildiz-fatih/traceroute" target="_blank">GitHub</a>
             </div>
             <p>Give it a hostname (or an IP address) and it prints the route your packets take to get there</p>
         </div>

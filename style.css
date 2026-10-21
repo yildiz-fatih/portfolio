@@ -1,163 +1,165 @@
-        :root {
-            --bg: #1E1F20;
-            --accent: #F35C51;
-            --text: #D6CBB6;
-            --mutedtext: #A2988A;
-        }
+/* ==========
+   Variables
+   ========== */
 
-        body {
-            margin: 0 auto;
-            padding-inline: 30px;
-            background-color: var(--bg);
-            color: var(--mutedtext);
-            font-family: "Schibsted Grotesk", sans-serif;
-            max-width: 800px;
-            /* center the content horizontally */
-            margin-inline: auto;
-        }
+:root {
+    --bg: #1E1F20;
+    --accent: #F35C51;
+    --text: #D6CBB6;
+    --mutedtext: #A2988A;
+}
 
-        h1,
-        h2,
-        h3 {
-            color: var(--text);
-        }
 
-        h1 {
-            font-size: 75px;
-            margin-bottom: 0px;
-        }
+/* ==========
+   Styles
+   ========== */
 
-        a {
-            color: var(--text);
-            text-decoration: none;
-        }
+html {
+    scroll-behavior: smooth;
+}
 
-        .project-card {
-            display: block;
-            border: 1.5px solid var(--mutedtext);
-            border-radius: 0;
-            padding: 20px;
-            color: var(--mutedtext);
-            margin-bottom: 24px;
-        }
+body {
+    /* center the content horizontally */
+    margin: 0 auto;
+    max-width: 800px;
+    padding-inline: 30px;
+    background-color: var(--bg);
+    color: var(--mutedtext);
+    font-family: "Schibsted Grotesk", sans-serif;
+}
 
-        .tag {
-            display: inline-block;
-            padding: 6px 16px;
-            background: var(--accent);
-            color: var(--bg);
-            margin-top: 2px;
-            margin-bottom: 6px;
-        }
+h1,
+h2,
+h3 {
+    color: var(--text);
+}
 
-        .btn {
-            font-size: 0.95rem;
-            padding: 8px 18px;
-            border: 1px solid var(--text);
-            transition: transform 0.1s;
-        }
+h1 {
+    font-size: 75px;
+    margin-bottom: 0px;
+}
 
-        .btn:hover {
-            color: var(--accent);
-            border-color: var(--accent);
-        }
+h2 {
+    font-size: 40px;
+}
 
-        .btn:active {
-            transform: scale(0.95);
-        }
+a {
+    color: var(--text);
+    text-decoration: none;
+}
 
-        nav {
-            display: flex;
-            gap: 12px;
-            margin-bottom: 20px;
-        }
+a:hover {
+    color: var(--accent);
+}
 
-        .aside {
-            font-style: italic;
-            font-size: 0.85em;
-            color: var(--mutedtext);
-            margin-bottom: 44px;
-            margin-top: 6px;
-        }
+a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+}
 
-        hr {
-            border: none;
-            width: 80px;
-            height: 1px;
-            background: var(--mutedtext);
-            margin: 56px auto;
-        }
+hr {
+    border: none;
+    width: 80px;
+    height: 1px;
+    background: var(--mutedtext);
+    margin: 56px auto;
+}
 
-        .project-card-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-        }
+::selection {
+    background: rgba(243, 92, 81, 0.4);
+}
 
-        .project-card-header h3 {
-            margin: 0;
-        }
+.text-link {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: var(--accent);
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1.5px;
+}
 
-        header {
-            gap: 40px;
-            min-height: 100vh;
-            min-height: 100dvh;
-            display: flex;
-            flex-direction: column;
+header {
+    gap: 40px;
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+}
 
-        }
+.intro {
+    margin-block: auto;
+}
 
-        .intro {
-            margin-block: auto;
-        }
+.subtitle {
+    display: inline-block;
+    padding: 6px 16px;
+    background: var(--accent);
+    color: var(--bg);
+    margin-top: 2px;
+    margin-bottom: 6px;
+}
 
-        .bottom {
-            text-align: center;
-            padding-bottom: 30px;
-        }
+.sub-subtitle {
+    font-style: italic;
+    font-size: 0.85em;
+    color: var(--mutedtext);
+    margin-bottom: 44px;
+    margin-top: 6px;
+}
 
-        nav {
-            justify-content: center;
-        }
+#graph-container {
+    display: block !important;
+    max-width: 340px;
+    padding-bottom: 0 !important;
+}
 
-        html {
-            scroll-behavior: smooth;
-        }
+#graph-container svg {
+    display: block;
+}
 
-        ::selection {
-            background: rgba(243, 92, 81, 0.4);
-        }
+.bottom {
+    text-align: center;
+    padding-bottom: 30px;
+}
 
-        h2 {
-            font-size: 40px;
-        }
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
 
-        #graph-container {
-            display: block !important;
-            max-width: 340px;
-            padding-bottom: 0 !important;
-        }
+.btn {
+    font-size: 0.95rem;
+    padding: 8px 18px;
+    border: 1px solid var(--text);
+    transition: transform 0.1s;
+}
 
-        #graph-container svg {
-            display: block;
-        }
+.btn:hover {
+    border-color: var(--accent);
+}
 
-        .text-link {
-            color: inherit;
-            text-decoration: underline;
-            text-decoration-color: var(--accent);
-            text-underline-offset: 3px;
-            text-decoration-thickness: 1.5px;
-        }
+.btn:active {
+    transform: scale(0.95);
+}
 
-        .text-link:hover {
-            color: var(--accent);
-        }
+.scroll-cue {
+    color: var(--mutedtext);
+}
 
-        .scroll-cue {
-            color: var(--mutedtext);
-        }
+.project-card {
+    border: 1.5px solid var(--mutedtext);
+    padding: 20px;
+    color: var(--mutedtext);
+    margin-bottom: 24px;
+}
 
-        .scroll-cue:hover {
-            color: var(--accent);
-        }
+.project-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.project-card-header h3 {
+    margin: 0;
+}

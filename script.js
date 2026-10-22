@@ -1,9 +1,11 @@
 const { createGitgraph, templateExtend, TemplateName } = GitgraphJS;
 
-const TEXT = "#D6CBB6";
-const ACCENT = "#F35C51";
-const BG = "#1E1F20";
-const FONT = '"Schibsted Grotesk", sans-serif';
+const styles = getComputedStyle(document.documentElement);
+
+const TEXT = styles.getPropertyValue("--text").trim();
+const ACCENT = styles.getPropertyValue("--accent").trim();
+const BG = styles.getPropertyValue("--bg").trim();
+const FONT = styles.getPropertyValue("--font").trim();
 
 const graphContainer = document.getElementById("graph-container");
 

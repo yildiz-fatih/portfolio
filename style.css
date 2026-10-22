@@ -3,10 +3,10 @@
    ========== */
 
 :root {
-    --bg: #1E1F20;
-    --accent: #F35C51;
-    --text: #D6CBB6;
-    --mutedtext: #A2988A;
+  --bg: #1e1f20;
+  --accent: #f35c51;
+  --text: #d6cbb6;
+  --mutedtext: #a2988a;
 }
 
 /* ==========
@@ -14,141 +14,141 @@
    ========== */
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    /* center the content horizontally */
-    margin-inline: auto;
-    max-width: 70rem;
-    padding-inline: 2rem;
-    background-color: var(--bg);
-    color: var(--mutedtext);
-    font-family: "Schibsted Grotesk", sans-serif;
+  /* center the content horizontally */
+  margin-inline: auto;
+  max-width: 70rem;
+  padding-inline: 2rem;
+  background-color: var(--bg);
+  color: var(--mutedtext);
+  font-family: "Schibsted Grotesk", sans-serif;
 }
 
 h1,
 h2,
 h3 {
-    color: var(--text);
+  color: var(--text);
 }
 
 h1 {
-    font-size: 5rem;
-    line-height: 0.95;
+  font-size: 5rem;
+  line-height: 0.95;
 }
 
 h2 {
-    font-size: 2.5rem;
+  font-size: 2.5rem;
 }
 
 a {
-    color: var(--text);
-    text-decoration: none;
+  color: var(--text);
+  text-decoration: none;
 }
 
 a:hover {
-    color: var(--accent);
+  color: var(--accent);
 }
 
 a:focus-visible {
-    outline: 2px solid var(--accent);
-    outline-offset: 3px;
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
 }
 
 hr {
-    border: none;
-    width: 5rem;
-    height: 1px;
-    background: var(--mutedtext);
-    margin: 4rem auto;
+  border: none;
+  width: 5rem;
+  height: 1px;
+  background: var(--mutedtext);
+  margin: 4rem auto;
 }
 
 ::selection {
-    background: color-mix(in srgb, var(--accent) 40%, transparent);
+  background: color-mix(in srgb, var(--accent) 40%, transparent);
 }
 
 .text-link {
-    color: inherit;
-    text-decoration: underline;
-    text-decoration-color: var(--accent);
-    text-underline-offset: 3px;
-    text-decoration-thickness: 1.5px;
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1.5px;
 }
 
 header {
-    gap: 3rem;
-    min-height: 100vh;
-    min-height: 100dvh;
-    display: flex;
-    flex-direction: column;
+  gap: 3rem;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
 }
 
 .intro {
-    margin-block: auto;
+  margin-block: auto;
 }
 
 .subtitle {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    background: var(--accent);
-    color: var(--bg);
-    font-weight: 700;
-    font-size: 1.1rem;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: var(--accent);
+  color: var(--bg);
+  font-weight: 700;
+  font-size: 1.1rem;
 }
 
 .sub-subtitle {
-    font-style: italic;
-    font-size: 0.9rem;
-    margin-top: 1rem;
-    margin-bottom: 2rem;
+  font-style: italic;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
 }
 
 #graph-container {
-    display: block !important;
-    max-width: 22rem;
-    padding-bottom: 0 !important;
+  display: block !important;
+  max-width: 22rem;
+  padding-bottom: 0 !important;
 }
 
 .bottom {
-    text-align: center;
-    padding-bottom: 2rem;
+  text-align: center;
+  padding-bottom: 2rem;
 }
 
 .contact-links {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-bottom: 1.25rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
 }
 
 .btn {
-    font-size: 1rem;
-    padding: 0.5rem 1.25rem;
-    border: 1px solid var(--text);
-    transition: transform 0.1s;
+  font-size: 1rem;
+  padding: 0.5rem 1.25rem;
+  border: 1px solid var(--text);
+  transition: transform 0.1s;
 }
 
 .btn:hover {
-    border-color: var(--accent);
+  border-color: var(--accent);
 }
 
 .btn:active {
-    transform: scale(0.95);
+  transform: scale(0.95);
 }
 
 .scroll-cue {
-    color: var(--mutedtext);
+  color: var(--mutedtext);
 }
 
 .project-card {
-    border: 1.5px solid var(--mutedtext);
-    padding: 1.25rem;
-    margin-bottom: 1.5rem;
+  border: 1.5px solid var(--mutedtext);
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
 }
 
 .project-card-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
 }

@@ -19,13 +19,22 @@ html {
 }
 
 body {
+  background-color: var(--bg);
+  color: var(--mutedtext);
+  font-family: var(--font);
+}
+
+header,
+main,
+.footer-content {
   /* center the content horizontally */
   margin-inline: auto;
   max-width: 70rem;
   padding-inline: 2rem;
-  background-color: var(--bg);
-  color: var(--mutedtext);
-  font-family: var(--font);
+}
+
+main {
+  padding-bottom: 4rem;
 }
 
 h1,
@@ -166,4 +175,20 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+}
+
+footer {
+  background-color: #141415;
+  padding-block: 4rem;
+}
+
+footer h2 {
+  color: var(--accent);
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+}
+
+footer a {
+  font-weight: bold;
+  font-size: 1.4rem;
 }

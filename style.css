@@ -4,6 +4,7 @@
 
 :root {
   --bg: #1e1f20;
+  --bg-darker: color-mix(in srgb, var(--bg), black 35%);
   --accent: #f35c51;
   --text: #d6cbb6;
   --mutedtext: #a2988a;
@@ -57,8 +58,10 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  color: var(--accent);
+@media (hover: hover) {
+  a:hover {
+    color: var(--accent);
+  }
 }
 
 a:focus-visible {
@@ -153,8 +156,11 @@ header {
   transition: transform 0.1s;
 }
 
-.btn:hover {
-  border-color: var(--accent);
+@media (hover: hover) {
+  .btn:hover {
+    border-color: var(--accent);
+    transform: scale(1.05);
+  }
 }
 
 .btn:active {
@@ -178,7 +184,7 @@ header {
 }
 
 footer {
-  background-color: #141415;
+  background-color: var(--bg-darker);
   padding-block: 4rem;
 }
 

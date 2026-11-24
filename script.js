@@ -25,13 +25,38 @@ const template = templateExtend(TemplateName.Metro, {
 
 const gitgraph = createGitgraph(graphContainer, { template, responsive: true });
 
+const SVG_NS = "http://www.w3.org/2000/svg";
+// Turns a commit message into a clickable link
+function link(subject, url) {
+  return {
+    subject,
+    renderMessage: (commit) => {
+      const a = document.createElementNS(SVG_NS, "a");
+      a.setAttribute("href", url);
+      a.setAttribute("target", "_blank");
+      a.setAttribute("rel", "noopener");
+      a.setAttribute("class", "text-link");
+      a.setAttribute("fill", commit.style.message.color);
+
+      const text = document.createElementNS(SVG_NS, "text");
+      text.setAttribute("dominant-baseline", "central");
+      text.setAttribute("y", commit.style.dot.size);
+      text.setAttribute("style", "font: " + commit.style.message.font);
+      text.textContent = subject;
+
+      a.appendChild(text);
+      return a;
+    },
+  };
+}
+
 const main = gitgraph.branch("main");
 main.commit(""); // initial commit
 
 const drums = main.branch("drums");
-drums.commit("Drummer @ Mastermind, 2019");
+drums.commit(link("Drummer @ Mastermind, 2019", "https://www.youtube.com/watch?v=1cUo0UlqW-k"));
 drums.commit("Drum Teacher @ Hayal Sahnesi, 2020");
 
-main.commit("SWE Intern @ Doğuş Teknoloji, 2023");
-main.commit("SWE Intern @ Intertech, 2024");
-main.commit("Contributor @ Donetick, 2026");
+main.commit(link("SWE Intern @ Doğuş Teknoloji, 2023", "https://www.d-teknoloji.com.tr"));
+main.commit(link("SWE Intern @ Intertech, 2024", "https://www.intertech.com.tr"));
+main.commit(link("Contributor @ Donetick, 2026", "https://donetick.com"));
